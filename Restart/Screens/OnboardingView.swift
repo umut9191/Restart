@@ -8,7 +8,12 @@
 import SwiftUI
 //Note: Option+Command+ Left arrow will hide where cursor's placement block. Option+Command+ Right as you guest, will show that block of code.
 struct OnboardingView: View {
+    //MARK: - Properties
     @AppStorage("onboarding") var isOnboarding:Bool = true
+    @State private var buttonWidth: Double = UIScreen.main.bounds.width - 80
+    @State private var buttonOffset: CGFloat = 0
+    
+    //MARK: - Body
     var body: some View {
         ZStack {
             Color("ColorBlue")
@@ -66,7 +71,7 @@ struct OnboardingView: View {
                     HStack{
                         Capsule()
                             .fill(Color("ColorRed"))
-                            .frame(width:80)
+                            .frame(width:buttonOffset + 80)
                         Spacer()
                     }
                     //4.Circle (Draggable)
@@ -79,13 +84,29 @@ struct OnboardingView: View {
                                 .padding(8)
                             Image(systemName: "chevron.right.2")
                                 .font(.system(size: 24,weight:.bold))
-                            
                         }
                         .foregroundColor(.white)
                     .frame(width: 80, height: 80, alignment: .center)
-                    .onTapGesture {
-                        isOnboarding = false
-                    }
+                    .offset(x:buttonOffset)
+                    .gesture(
+                    DragGesture()
+                        .onChanged{ gesture in
+                            if gesture.translation.width > 0  && buttonOffset <= buttonWidth - 80{
+                                buttonOffset = gesture.translation.width
+                            }
+                        }
+                        .onEnded{ _ in
+                            if buttonOffset > buttonWidth / 2 {
+                                buttonOffset = buttonWidth - 80
+                                isOnboarding = false
+                            }else{
+                                buttonOffset = 0
+                            }
+                        }
+                    )//Gesture
+//                    .onTapGesture {
+//                        isOnboarding = false
+//                    }
                         Spacer()
                     }//HStack
                     
@@ -93,7 +114,7 @@ struct OnboardingView: View {
                     
                     
                 }//:Footer
-                .frame(height: 80, alignment: .center)
+                .frame(width:buttonWidth,height: 80, alignment: .center)
                 .padding()
                 
                 
