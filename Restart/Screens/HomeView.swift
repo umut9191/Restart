@@ -45,6 +45,7 @@ struct HomeView: View {
 //                .font(.largeTitle)
             Button(action:{
                 withAnimation{
+                    playSound(sound: "success", type: "m4a")
                     isOnBoarding = true
                 }
                 

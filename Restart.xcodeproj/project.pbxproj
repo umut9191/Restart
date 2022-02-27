@@ -16,6 +16,7 @@
 		E214065027C586B8003E1B42 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E214064F27C586B8003E1B42 /* OnboardingView.swift */; };
 		E214065227C586DD003E1B42 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E214065127C586DD003E1B42 /* HomeView.swift */; };
 		E24C982A27C980B900485153 /* CircleGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24C982927C980B800485153 /* CircleGroupView.swift */; };
+		E2E51A5627CB98F3007D8BCD /* AudioPalyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E51A5527CB98F3007D8BCD /* AudioPalyer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E214064F27C586B8003E1B42 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		E214065127C586DD003E1B42 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E24C982927C980B800485153 /* CircleGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleGroupView.swift; sourceTree = "<group>"; };
+		E2E51A5527CB98F3007D8BCD /* AudioPalyer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPalyer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		E214064D27C57AA1003E1B42 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				E2E51A5527CB98F3007D8BCD /* AudioPalyer.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				E24C982A27C980B900485153 /* CircleGroupView.swift in Sources */,
 				E214065027C586B8003E1B42 /* OnboardingView.swift in Sources */,
 				E214065227C586DD003E1B42 /* HomeView.swift in Sources */,
+				E2E51A5627CB98F3007D8BCD /* AudioPalyer.swift in Sources */,
 				E214063C27C5735D003E1B42 /* ContentView.swift in Sources */,
 				E214063A27C5735D003E1B42 /* RestartApp.swift in Sources */,
 			);
